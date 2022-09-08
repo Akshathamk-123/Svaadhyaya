@@ -1,1 +1,1 @@
-# SAMAGIC-hackathon
+#SVAADHYAAYA-Classroom 2.0
