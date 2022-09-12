@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+  <script src="https://kit.fontawesome.com/d14688c56a.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap css link should go before ur own css link  -->
+  <script type="text/javascript" src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+
+</script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://kit.fontawesome.com/d14688c56a.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section style="font-family: 'Roboto', sans-serif;">
+        <div class="container-fluid">
+               <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:black; position: fixed; width: 100%;" > <!--  bg-secondary is being removed -->
+        <a class="navbar-brand" href="#pricing" style="font-size:2rem;">SVAADYAAYA</a>
+        <i class="fa-solid fa-fire fa-2x" style="color: white"></i>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <!-- for dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Check this</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+    
+            <li class="nav-item">
+                <a class="nav-link" href="#footer">Contact</a>
+    
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+        </ul>
+        </div>
+    
+    </nav>
+        </div>
+    </section>
+
+    <section>
+        <form method="POST">
+            <br> <br> <br> <br>
+            <p style="text-align: center; font-size: 50px;">Text to speech conversion: </p><br>
+            <p style="text-align: center; font-size: 25px;">What do you want to convert to speech ? </p><br>
+        
+            <input type="text" name="answer" class="textbox" placeholder="type your text here" autofocus style="width: 50%; margin: auto 300px; height: 45px;"/><br>
+        <br><br>
+            <input type="submit" style="margin: auto 600px; " class="btn btn-primary"/>
+
+        </form>
+    </section>
+    <br><br><br>
+    <section>
+        <div id="speechContainer">
+            <p style="text-align: center; font-size: 50px;">Speech recognition:</p><br>
+            <p style="text-align: center; font-size: 25px;">Upload new File</p>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" class="btn btn-primary" style="margin: auto 500px; ">
+                <br> <br> 
+                <input type="submit" id="submitButton" value="Transcribe" style="margin: auto 600px; " class="btn btn-primary"/>
+            </form>
+         
+            {% if transcript != "" %}
+                <div id="speechTranscriptContainer">
+                    <!-- <h1 style="margin: auto 500px; ">Transcript</h1> -->
+                    <p id="speechText" style="margin: auto 600px; ">{{ transcript }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+<br><br> <br>
+    <section>
+        <p style=" text-align:center; font-size: 50px;">Sign language recognition:</p><br>
+        <p style=" text-align:center; font-size: 25px;">Demo video</p><br>
+        <video style="margin-left: 400px;" width="45%" height="300px" controls>
+            <source src="\static\assets\demo_sign.mp4" type="video/mp4">
+          </video>
+    </section>
+
+    <footer class="page-footer font-small bg-dark">
+        <div class="footer text-center py-3" style="color: white;
+            margin-top:150px">This is our project</div>
+    </footer>
+</body>
+</html>

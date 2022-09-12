@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+  <script src="https://kit.fontawesome.com/d14688c56a.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap css link should go before ur own css link  -->
+  <script type="text/javascript" src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+
+</script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://kit.fontawesome.com/d14688c56a.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section>
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:black; position: fixed; width: 100%; z-index: 1;" > <!--  bg-secondary is being removed -->
+     <a class="navbar-brand" href="#pricing" style="font-size:2rem;">SVAADYAAYA</a>
+     <i class="fa-solid fa-fire fa-2x" style="color: white"></i>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav ms-auto">
+       <!-- for dropdown -->
+         <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Check this</a>
+             <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#">Action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+             </ul>
+         </li>
+ 
+         <li class="nav-item">
+             <a class="nav-link" href="#footer">Contact</a>
+ 
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="#testimonials">Home</a>
+         </li>
+         <li>
+             <a class="nav-link" href="#pricing">Pricing</a>
+         </li>
+     </ul>
+     </div>
+ 
+ </nav>
+ <br><br><br><br>
+     </div>
+    </section>
+
+    <!-- <h1 style="align-items: center;">this is for booking</h1> -->
+    <div id="booking_form" class='details' style="margin-top: -33px;">
+        <h1>
+          Student Details:
+        </h1>
+        <form action="" method="POST">
+            <div class="form-group row">
+                <label for="person1" class="col-3 col-form-label">Name: </label>
+                <div class="col-9">
+                  <input id="person1" name="person1" type="text" class="form-control"
+                    required="required">
+                </div>
+            </div><br><br>
+            <div class="form-group row">
+                <label for="person1" class="col-3 col-form-label">Email: </label>
+                <div class="col-9">
+                  <input id="person1" name="person1" type="email" class="form-control"
+                    required="required">
+                </div>
+            </div> <br><br>
+            <div class="form-group row">
+                <label for="person1" class="col-3 col-form-label">College: </label>
+                <div class="col-9">
+                  <input id="person1" name="person1" type="text" class="form-control"
+                    required="required">
+                </div>
+            </div> <br><br>
+            <div class="form-group row">
+                <label for="person1" class="col-3 col-form-label">Contact Number: </label>
+                <div class="col-9">
+                  <input id="person1" name="person1" type="tel" pattern="[0-9]{10}"  class="form-control"
+                    required="required">
+                </div>
+            </div> 
+            <div class="form-group row">
+                <div class="offset-3 col-9">
+                  <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <!-- <form action="" method="POST">
+          {% if event == 'Birthday' %}
+          <div class="form-group row">
+            <label for="person1" class="col-3 col-form-label">Hackathon for </label>
+            <div class="col-9">
+              <input id="person1" name="person1" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+          {% elif event == 'Anniversary' %}
+          <div class="form-group row">
+            <label for="person1" class="col-3 col-form-label">Name of Person 1</label>
+            <div class="col-9">
+              <input id="person1" name="person1" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="person2" class="col-3 col-form-label">Name of Person 2</label>
+            <div class="col-9">
+              <input id="person2" name="person2" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+          {% elif event == 'Other' %}
+          <div class="form-group row">
+            <label for="etype" class="col-3 col-form-label">Event Name</label>
+            <div class="col-9">
+              <input id="etype" name="etype" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+          {% endif %}
+          <div class="form-group row">
+            <label for="venue" class="col-3 col-form-label">Venue</label>
+            <div class="col-9">
+              <textarea id="venue" name="venue" cols="40" rows="3"
+                class="form-control"
+                required="required"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="tier" class="col-3 col-form-label">Event Tier</label>
+            <div class="col-9">
+              <select id="tier" name="tier" required="required"
+                class="custom-select">
+                <option value="tier1">Tier 1 (Base Price: {{ t1_base }} | Per
+                  person: {{ t1_per }})</option>
+                <option value="tier2">Tier 2 (Base Price: {{ t2_base }} | Per
+                  person: {{ t2_per }})</option>
+                <option value="tier3">Tier 3 (Base Price: {{ t3_base }} | Per
+                  person: {{ t3_per }})</option>
+                <option value="tier4">Tier 4 (Base Price: {{ t4_base }} | Per
+                  person: {{ t4_per }})</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="max" class="col-3 col-form-label">Max Capacity</label>
+            <div class="col-9">
+              <input id="max" name="max" placeholder="Number of People"
+                type="number" min='1' max='1000'
+                class="form-control">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="edate" class="col-3 col-form-label">Event Date</label>
+            <div class="col-9">
+              <input id="edate" name="edate" type="date" class="form-control"
+                onkeydown="return false">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="requests" class="col-3 col-form-label">Special Requests</label>
+            <div class="col-9">
+              <textarea id="requests" name="requests" cols="40" rows="3"
+                aria-describedby="requestsHelpBlock"
+                class="form-control"></textarea>
+              <span id="requestsHelpBlock" class="form-text text-muted">Optional</span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-3 col-9">
+              <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form> -->
+      </div>
+</body>
+</html>

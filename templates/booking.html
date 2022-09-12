@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Book Event</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
+{% endblock head %}
+
+{% block body %}
+<div>
+  <br><br>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3"><center>{{ event }} Event Booking Page</center></h1>
+    </div>
+  </div>
+</div>
+<div id="booking_form" class='details' style="margin-top: -33px;">
+  <h1>
+    Event Details:
+  </h1>
+  <form action="" method="POST">
+    {% if event == 'Birthday' %}
+    <div class="form-group row">
+      <label for="person1" class="col-3 col-form-label">Birthday of</label>
+      <div class="col-9">
+        <input id="person1" name="person1" type="text" class="form-control"
+          required="required">
+      </div>
+    </div>
+    {% elif event == 'Anniversary' %}
+    <div class="form-group row">
+      <label for="person1" class="col-3 col-form-label">Name of Person 1</label>
+      <div class="col-9">
+        <input id="person1" name="person1" type="text" class="form-control"
+          required="required">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="person2" class="col-3 col-form-label">Name of Person 2</label>
+      <div class="col-9">
+        <input id="person2" name="person2" type="text" class="form-control"
+          required="required">
+      </div>
+    </div>
+    {% elif event == 'Other' %}
+    <div class="form-group row">
+      <label for="etype" class="col-3 col-form-label">Event Name</label>
+      <div class="col-9">
+        <input id="etype" name="etype" type="text" class="form-control"
+          required="required">
+      </div>
+    </div>
+    {% endif %}
+    <div class="form-group row">
+      <label for="venue" class="col-3 col-form-label">Venue</label>
+      <div class="col-9">
+        <textarea id="venue" name="venue" cols="40" rows="3"
+          class="form-control"
+          required="required"></textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="tier" class="col-3 col-form-label">Event Tier</label>
+      <div class="col-9">
+        <select id="tier" name="tier" required="required"
+          class="custom-select">
+          <option value="tier1">Tier 1 (Base Price: {{ t1_base }} | Per
+            person: {{ t1_per }})</option>
+          <option value="tier2">Tier 2 (Base Price: {{ t2_base }} | Per
+            person: {{ t2_per }})</option>
+          <option value="tier3">Tier 3 (Base Price: {{ t3_base }} | Per
+            person: {{ t3_per }})</option>
+          <option value="tier4">Tier 4 (Base Price: {{ t4_base }} | Per
+            person: {{ t4_per }})</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="max" class="col-3 col-form-label">Max Capacity</label>
+      <div class="col-9">
+        <input id="max" name="max" placeholder="Number of People"
+          type="number" min='1' max='1000'
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="edate" class="col-3 col-form-label">Event Date</label>
+      <div class="col-9">
+        <input id="edate" name="edate" type="date" class="form-control"
+          onkeydown="return false">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="requests" class="col-3 col-form-label">Special Requests</label>
+      <div class="col-9">
+        <textarea id="requests" name="requests" cols="40" rows="3"
+          aria-describedby="requestsHelpBlock"
+          class="form-control"></textarea>
+        <span id="requestsHelpBlock" class="form-text text-muted">Optional</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-3 col-9">
+        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock body %}

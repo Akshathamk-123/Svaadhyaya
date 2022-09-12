@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+<title>Dashboard</title>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid welcome" style="background: whitesmoke;">
+  <div class="container">
+    <br><br><br>
+    <div>
+      <h1 style="display:inline">Welcome, {{ session['username'] }}</h1>
+      <a class="btn btn-danger float-right" style="margin-left: 5px;"
+        href='/logout'> Logout </a>
+      <a class="btn btn-success float-right" style="margin-left: 5px;"
+        href='/home'> Home </a>
+      <a class="btn btn-primary float-right" style="margin-left: 5px;"
+        href='/personal'> Edit Personal Info </a>
+      <hr>
+    </div>
+    <div class='personal'>
+      {% if pdata %}
+       <h3><strong>Name:</strong> {{ pdata.fname }} {{ pdata.mname }} {{
+        pdata.lname
+        }}</h3>
+       <h3><strong>Date of Birth:</strong> {{ pdata.dob }}</h3>
+       <h3><strong>Gender:</strong> {{ pdata.gender }}</h3>
+       <h3><strong>Contact:</strong> {{ pdata.contact1 }}
+        {% if not pdata.contact2 == 0 %}
+        / {{ pdata.contact2 }}
+        {% endif %}
+        {% if not pdata.contact3 == 0 %}
+        / {{ pdata.contact3 }}
+        {% endif %}
+      </h3>
+      <h3><strong>Address:</strong> {{pdata.address}}</h3>
+      <h3><strong>Total Events Booked:</strong> {{ cn.count }}</h3>
+      {% else %}
+      <h3><strong>No Personal Info Found.</strong></h3>
+      {% endif %}
+    </div>
+    <br>
+  </div>
+</div>
+<div class="container-fluid booking">
+  <h1>All Events Bookings</h1>
+</div>
+<div class="container">
+  {% if not events %}
+  <br>
+  <div class="no-event">
+    <h1>No Events Booked.</h1>
+  </div>
+  {% else %}
+  {% for event in events %}
+  <br>
+  <div class="events" name='{{ event.eid }}'>
+    <br>
+    <h2>
+      {{ event.etype }}
+    </h2>
+    <h4>
+      {% if event.person2 %}
+      Event for: {{ event.person1 }} and {{ event.person2 }}
+      {% elif event.person1 %}
+      Event for: {{ event.person1 }}
+      {% endif %}
+    </h4>
+    <h4>
+      Event Date: {{ event.edate }}
+    </h4>
+    <h4>
+      Event Location: {{ event.evenue }}
+    </h4>
+    <h4>
+      Total Cost: {{event.ecost}} | Tier: {{ event.etier }} | Max People: {{
+      event.emax_people }}
+    </h4>
+    {% if event.especial %}
+    <h4>
+      Special Request: {{ event.especial }}
+    </h4>
+    {% endif %}
+    <br>
+  </div>
+  <br>
+  {% endfor%}
+</div>
+{% endif %}
+
+{% endblock %}

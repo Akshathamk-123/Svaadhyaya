@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Welcome</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock head %}
+
+{% block body %}
+<main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="first-slide" src="/static/birthday.jpg" alt="First slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="carousel-c1">Birthdays</h1>
+            <p class="carousel-c1">Come book a fine Birthday Event. We organise
+              one of the best Birthday parties there is.
+            </p>
+            <p><a class="btn btn-lg btn-danger" href="/birthday" role="button">Book
+                Birthday Party</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="second-slide" src="/static/anniversary.jpg" alt="Second
+          slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="carousel-c2">Anniversaries</h1>
+            <p class="carousel-c2">Come book a gorgeous Anniversary for
+              a couple. We have one of the best decoration themes for
+              Anniversaries.
+            </p>
+            <p><a class="btn btn-lg btn-success" href="/anniversary"
+                role="button">Book Anniversary</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="third-slide" src="/static/other_celebrations.png" alt="Third
+          slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="carousel-c3">Other Events</h1>
+            <p class="carousel-c3">Book any other event. We can organise
+              almost all types of events. Just provide the name of event and we
+              will
+              handle the rest.
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="/other" role="button">Book
+                Other Event</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button"
+      data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button"
+      data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div class="container marketing" style="background-color: whitesmoke;
+    padding-top: 70px;
+    margin-top: -70px;">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/birthday1.jfif" alt="Birthday"
+          width="140" height="140">
+        <h2>Birthdays</h2>
+        <p>Birthday is the first day of another 365-day journey.
+          Be the shining thread in the beautiful tapestry of the world
+          to make this year the best ever. Come book a birthday party
+          to enjoy the ride!
+        </p>
+        <p><a class="btn btn-danger" href="/birthday" role="button">Book it Now
+            &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/anniversary1.jpg"
+          alt="Anniversary" width="140" height="140">
+        <h2>Anniversaries</h2>
+        <p>
+          A great marriage is not when the perfect couple comes together.
+          It is when an imperfect couple learns to enjoy their differences.
+          Come book an anniversary now.
+        </p>
+        <p><a class="btn btn-success" href="anniversary" role="button">Book it
+            Now &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/other1.jfif" alt="Other Events"
+          width="140" height="140">
+        <h2>Other Events</h2>
+        <p>Book an event or 2. Book one book all. We don't fail our customers in
+          the slightest and
+          ensure they get best of the best.</p>
+        <p><a class="btn btn-primary" href="/other" role="button">Book it Now
+            &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">We organise birthday parties. <span
+            class="text-muted">The best of the best.</span>
+        </h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto"
+          src="/static/birthday2.jpg" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">We also organise Anniversaries. <span
+            class="text-muted">Try not to miss the it. </span></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto"
+          src="/static/anniversary2.jpg" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, any event you request. <span
+            class="text-muted">You won't regret our event organisations. </span></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" src="/static/party1.jpg"
+          alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a class="btn btn-danger" href="#" role="button">Back
+        to top</a></p>
+  </footer>
+</main>
+
+{% endblock body %}
