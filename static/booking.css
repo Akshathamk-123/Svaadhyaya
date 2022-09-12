@@ -1,0 +1,9 @@
+.details {
+    border-radius: 25px; 
+    background: whitesmoke; 
+    padding-left: 30px; 
+    padding-right: 30px;
+    padding-top: 20px;
+    border: solid;
+    border-color: darkgray;
+}

@@ -1,0 +1,9 @@
+.details {
+    background: whitesmoke; 
+    padding-left: 30px; 
+    padding-right: 30px;
+    padding-top: 20px;
+    border-bottom: solid;
+    border-color: darkgray;
+    margin-top: -35px;
+}

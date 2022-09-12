@@ -1,0 +1,14 @@
+.carousel-inner > .carousel-item >img{
+    height: 600px;
+}
+.carousel-caption > h1{
+    font-size: 60px;
+    color: lightcyan;
+}
+body{
+    background-image: url('bg.jpg');
+    margin: 0;
+}
+.carousel{
+    margin-top: 0px;
+}

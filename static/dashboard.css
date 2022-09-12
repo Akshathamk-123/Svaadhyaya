@@ -1,0 +1,32 @@
+.events, .personal-info {
+    border-radius: 25px;
+    background: linear-gradient(to top, white, whitesmoke);
+    padding-left: 30px; 
+    padding-right: 30px;
+    border: solid;
+    border-color: darkgray;
+}
+
+.welcome {
+    background: whitesmoke;
+}
+
+.no-event {
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background: whitesmoke;
+    text-align: center;
+    border: solid;
+    border-color: gray;
+    border-radius: 25px;
+}
+
+.booking {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: lightgray;
+    background-color: whitesmoke;
+}
